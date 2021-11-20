@@ -1,0 +1,28 @@
+.cus-colCurrent{
+    background-color: aqua;
+    height: 40vh;
+}
+.cus-colSearch{
+    background-color: brown;
+    height: 20vh;
+
+}
+.cus-col12{
+    background-color: blue;
+    height: 10vh;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.cus-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cus-colStored{
+    background-color: violet;
+    height:70vh;
+}
