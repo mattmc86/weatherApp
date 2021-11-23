@@ -1,9 +1,10 @@
 .cus-colCurrent{
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 40vh;
+    border: solid black 1px;
 }
 .cus-colSearch{
-    background-color: brown;
+    /* background-color: brown; */
     height: 20vh;
 
 }
@@ -12,6 +13,7 @@
     height: 10vh;
     color: white;
     font-weight: bold;
+    margin-bottom: 5px;
     
 }
 
@@ -23,15 +25,15 @@
 }
 
 .cus-colStored{
-    background-color: violet;
+    /* background-color: violet; */
     height:70vh;
     display:flex;
     flex-direction: column;
-    
+
 }
 
 .btn-cus{
     height: 50px;
     width: 50px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
