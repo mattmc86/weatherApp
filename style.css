@@ -1,6 +1,6 @@
 .cus-colCurrent{
     /* background-color: aqua; */
-    height: 40vh;
+    height: 45vh;
     border: solid black 1px;
 }
 .cus-colSearch{
@@ -36,4 +36,38 @@
     height: 50px;
     width: 50px;
     /* background-color: aquamarine; */
+}
+
+
+.UVSpaceGreen{
+    height: 30px;
+    width: 60px;
+    background-color: green;
+    color: white;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UVSpaceAmber{
+    height: 30px;
+    width: 60px;
+    background-color:orange;
+    color: white;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UVSpaceRed{
+    height: 30px;
+    width: 60px;
+    background-color: red;
+    color: white;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

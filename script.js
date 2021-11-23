@@ -63,13 +63,41 @@ function getApi() {
         var temp = document.createElement('p');
         var cityName = document.createElement('h2');
         var humidity = document.createElement('p');
-       // var UVIndex = document.createElement('p');
+        var lat = data.coord.lon;
+        var lon = data.coord.lat;
+      
+        
         
         cityName.textContent = data.name + " " + today;
-        wind.textContent = "Wind " + data.wind.speed + " mph";
+        wind.textContent = "Wind " + data.wind.speed + " mph"
         temp.textContent = "Temp  " + data.main.temp + "°F";
         humidity.textContent = "Humidity " + data.main.humidity + "%";
-        //UVIndex.textContent = "UV ";
+
+        var coordURL = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&&appid=51b8740ba38e6f14ed03de9b608c5b7a';
+        fetch(coordURL)
+       .then(function (response) {
+         return response.json();
+       })
+       .then(function (data) {
+         console.log(data);
+        var UVIndexContainer = document.createElement('div');
+        
+
+        var UVIndex = document.createElement('p');
+        UVIndex.textContent = "UV " + data.current.uvi;
+
+        if (data.current.uvi <2){
+          UVIndexContainer.setAttribute('class', 'UVSpaceGreen');
+        } else if(data.current.uvi >=2 && data.current.uvi<4){
+          UVIndexContainer.setAttribute('class', 'UVSpaceAmber')
+        } else{
+        UVIndexContainer.setAttribute('class', 'UVSpaceRed')
+      };
+
+        UVIndexContainer.append(UVIndex);
+        issueContainer.append(UVIndexContainer);
+       });
+
 
         var iconImage = document.createElement('img')
         iconImage.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
@@ -78,6 +106,7 @@ function getApi() {
         issueContainer.append(wind);
         issueContainer.append(temp);
         issueContainer.append(humidity);
+        
       
     });
 
