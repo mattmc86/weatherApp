@@ -27,4 +27,11 @@
     height:70vh;
     display:flex;
     flex-direction: column;
+    
+}
+
+.btn-cus{
+    height: 50px;
+    width: 50px;
+    background-color: aquamarine;
 }

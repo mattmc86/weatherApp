@@ -72,17 +72,30 @@ function getApi() {
     var savedSearch = localStorage.getItem('cityName');
     storedSearch.append(savedSearch + " ");
 
-    var requestForecastUrl =  `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=51b8740ba38e6f14ed03de9b608c5b7a`;
+    var requestForecastUrl =  `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=51b8740ba38e6f14ed03de9b608c5b7a`;
     fetch(requestForecastUrl)
        .then(function (response) {
          return response.json();
        })
        .then(function (data) {
-         console.log("data forecaset " + data);
+         console.log(data);
+         
        
          
            //var date = document.createElement('h3');
-           //document.querySelector('.card-text').textContent = data.sys.dt_txt;
+           document.querySelector('.card-textOne').textContent = data.list[4].main.temp;
+          //  var dateOneWind = document.querySelector('.card-textOne').textContent = data.list[4].wind.speed;
+          //  dateOne.append(dateOneWind);
+           //var dayOneWind = document.querySelector(".card-textOne");
+          // dayOneWind.textContent = data.list[4].wind.speed;
+           //document.querySelector('.card-textOne').textContent = data.list[4].wind.speed;
+           //document.querySelector('.card-textOne').textContent = data.list[4].dt_text;
+
+           document.querySelector('.card-textTwo').textContent = data.list[12].main.temp;
+           document.querySelector('.card-textThree').textContent = data.list[20].main.temp;
+           document.querySelector('.card-textFour').textContent = data.list[28].main.temp;
+           document.querySelector('.card-textFive').textContent = data.list[36].main.temp;
+
            //document.querySelector('temp').textContent = data.temp;
            //document.querySelector('htmlclassorid').textContent = data.humidty;
            
