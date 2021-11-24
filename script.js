@@ -111,10 +111,12 @@ function getApi() {
     });
 
     localStorage.setItem("cityName", cityName);
-    console.log("CityName is " + cityName)
-    //var searchButton = document.createElement('button');
+    searchButton = document.createElement('button');
+    searchButton.setAttribute('class','cityButton')
     var savedSearch = localStorage.getItem('cityName');
-    storedSearch.append(savedSearch + " ");
+    SearchButton = document.innerHTML=cityName
+    storedSearch.append(searchButton);
+    //storedSearch.append(savedSearch + " ");
 
     var requestForecastUrl =  `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=51b8740ba38e6f14ed03de9b608c5b7a`;
     fetch(requestForecastUrl)
