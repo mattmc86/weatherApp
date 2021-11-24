@@ -3,7 +3,8 @@
 
 
 use previous search button to perfrom new search
-stop it from overflowing into new forecast div
+move forecast closer to current day
+
 
 
 

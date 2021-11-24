@@ -91,7 +91,7 @@
 
 .topRight{
     width: 70vw;
-    height: 50vh;  
+    height: 300px; 
     /* border: black solid 2px; */
     display: flex;
     flex-direction: column;
@@ -116,8 +116,8 @@
 .bottomRight{
     width: 100vw;
     height: 50vh;
-    margin-left: 45px;
-    margin-top: 50px;
+    margin-left: 450px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
