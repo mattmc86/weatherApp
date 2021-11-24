@@ -9,7 +9,9 @@ var dayFour = document.querySelector(".card-textFour");
 var dayFive = document.querySelector(".card-textFive");
 var forecastContainer = document.querySelector(".forecastContainer");
 
-function getApi() {
+//var cityName = nameInputEl.value.trim();
+
+function getApi(cityName) {
   var today = moment().format("MMM DD, YYYY");
   $("#currentDay").text(today);
 
@@ -28,7 +30,7 @@ function getApi() {
   var dayFiveDisplay = moment().add(5, "days");
   var dayFiveFull = moment(dayFiveDisplay).format("MMM Do YYYY");
 
-  var cityName = nameInputEl.value.trim();
+  //var cityName = nameInputEl.value.trim();
 
   var finalURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -341,12 +343,19 @@ function getApi() {
 
   searchButton.addEventListener("click", reRun);
 
-  function reRun() {
-    //cityName = this.searchButton.textContent;
-    console.log("button text to use as cityName " + searchButton.textContent);
-    console.log(cityName);
-    getApi(cityName);
-  }
+  
 }
 
-fetchButton.addEventListener("click", getApi);
+fetchButton.addEventListener("click", () => { 
+  var searchName = nameInputEl.value.trim();
+  getApi(searchName);
+} );
+
+function reRun(event) {
+  var newCity = event.target.textContent;
+  console.log(newCity);
+  //cityName = this.searchButton.textContent;
+  //console.log("button text to use as cityName " + searchButton.textContent);
+  //console.log(cityName);
+  getApi(newCity);
+}
