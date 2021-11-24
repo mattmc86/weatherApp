@@ -114,7 +114,9 @@ function getApi() {
     searchButton = document.createElement('button');
     searchButton.setAttribute('class','cityButton')
     var savedSearch = localStorage.getItem('cityName');
-    SearchButton = document.innerHTML=cityName
+    //searchButton = document.innerHTML=savedSearch
+    searchButton.textContent = savedSearch;
+
     storedSearch.append(searchButton);
     //storedSearch.append(savedSearch + " ");
 
@@ -307,19 +309,21 @@ dayFive.append(colFive);
         
        });
 
+       searchButton.addEventListener('click', reRun)
+       
+
+ function reRun(){
+     console.log("button text to use as cityName " + searchButton.textContent)
+     cityName = searchButton.textContent;
+     console.log(cityName);
+     getApi(cityName);
+ }
+
 }
 
 fetchButton.addEventListener('click', getApi);
 
 
-
-// function displaySearches(){
-//     //for each cityName entered create a button with class of fetch button
-//     var searchButton = document.createElement('Button');
-//     storedSearch.append(savedSearch);
-   
-//     //
-// }
 
 
 
