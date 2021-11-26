@@ -8,6 +8,7 @@ var dayThree = document.querySelector(".card-textThree");
 var dayFour = document.querySelector(".card-textFour");
 var dayFive = document.querySelector(".card-textFive");
 var forecastContainer = document.querySelector(".forecastContainer");
+var clearSearchBar = document.querySelector(".clear");
 
 //var cityName = nameInputEl.value.trim();
 
@@ -342,6 +343,16 @@ function getApi(cityName) {
     });
 
   searchButton.addEventListener("click", reRun);
+  clearSearchBar.addEventListener("click", clearSearch);
+
+  function clearSearch(){
+    console.log(nameInputEl.value);
+    //newSearch = "eee";
+    //nameInputEl.innerHTML=newSearch;
+    //nameInputEl.value = "";
+    nameInputEl.textContent = "";
+
+  }
 
   
 }
@@ -359,3 +370,4 @@ function reRun(event) {
   //console.log(cityName);
   getApi(newCity);
 }
+

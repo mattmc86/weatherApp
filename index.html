@@ -31,223 +31,104 @@
 
     </header>
 
-   <div class = "top">
-      <div class = "topLeft">
-        <label for="citySearch" class="form-label">Search for a City</label>
-        <br>
-        <input  class="form-control" id="citySearch">
-        <br>
-        <button  id="fetch-button">Search</button> 
-        <!-- class="btn btn-danger" -->
-        <br>
-        <br>
+  <div class ='topNew'>
+    <div class ="topLeftNew">
+      <label for="citySearch" class="form-label">Search for a City</label>
+      <br>
+      <input  class="form-control" id="citySearch">
+      <br>
+      <button class = "searchButton" id="fetch-button">Search</button> 
+      <!-- <button class = "clear">Clear</button> -->
+      <!-- class="btn btn-danger" -->
+      <br>
+      <br>
 
-       
-
-        <div>
-             <div class="cus-colStored">
-            
-            </div>
-        </div>
-      </div>
-
-      <div class = "topRight" id="issues">
-        <p id="currentDay" class="lead"></p>
-
-      </div>
-
-   </div>
-
-   <div class = "bottom">
-      <div class = "bottomLeft">
-      </div>
-
-      <div class = "bottomRight" >
-        <section class = 'forecastContainer'>
-                
-        </section>
-
-          <main class="container">
-              <!-- <section class="row"> -->
-                <div class="col-12 col-md-9">
-                  <h2>5 day Forecast</h2>
+      <div>
+           <div class="cus-colStored">
           
-                  <section class="row ">
-          
-                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                      <div class="card" id="dayOneForecast">
+          </div>
+      </div>
+    </div>
+    <div class = "newContainer">
+      <div class = "topRightNew" id = "issues">
+        <p id="currentDay" class="lead"></p> </div>
+        <div class="bottomRightNew">
+          <section class="row rowNew">
+            <div class="col-12 col-md-9">
+              <h2>5 day Forecast</h2>
+      
+              <section class="row cusRow">
+      
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                  <div class="card cusCard" id="dayOneForecast">
+                   
+                    <div class="card-body">
+                      <p class="card-textOne">
                        
-                        <div class="card-body">
-                          <p class="card-textOne">
-                           
-                          </p>
-                        </div>
-                      </div>
+                      </p>
                     </div>
-                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                      <div class="card" id="dayOneForecast">
-                       
-                        <div class="card-body">
-                          <p class="card-textTwo">
-                          
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                      <div class="card" id="dayOneForecast">
-                        
-                        <div class="card-body">
-                          <p class="card-textThree">
-                           
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                      <div class="card" id="dayOneForecast">
-                        
-                        <div class="card-body">
-                          <p class="card-textFour">
-                           
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                      <div class="card" id="dayOneForecast">
-                        
-                        <div class="card-body">
-                          <p class="card-textFive">
-                          
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-
-                  <!-- </section>   -->
+                  </div>
                 </div>
-          </main>
-
-      </div>
-
-
-
-
-   </div>
-  
-<!-- 
-    <div class="container">
-        <div class="row">
-             <div class="col-2 cus-colSearch">
-                <form>
-                    <div class="mb-3">
-                      <label for="citySearch" class="form-label">Search for a City</label>
-                      <input  class="form-control" id="citySearch">
-                       <button class="btn btn-danger" id="fetch-button">Search</button>  -->
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                  <div class="card cusCard" id="dayOneForecast">
+                   
+                    <div class="card-body">
+                      <p class="card-textTwo">
                       
-                    <!-- </div> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                  <div class="card cusCard" id="dayOneForecast">
+                     
+                     <div class="card-body">
+                      <p class="card-textThree">
+                       
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                  <div class="card cusCard" id="dayOneForecast">
                     
+                    <div class="card-body">
+                      <p class="card-textFour">
+                       
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 ">
+                  <div class="card cusCard" id="dayOneForecast">
                     
-                    <!-- <button class="btn btn-danger" id="fetch-button"></button> -->
-                    <!-- <button type="submit" class="btn btn-primary" id="fetch-button">Search</button> -->
-                    
-                  <!-- </form> -->
-                 
-            <!-- </div> -->
-            <!-- <div class="col-10 cus-colCurrent"> -->
-              <!-- <br>
-              <button class="btn btn-danger" id="fetch-button">Search</button> 
-              <br>
-              <div class="container" id="issues">
-                
-                < <div id="icon"><img id="weatherIcon" src="" alt="Weather icon"></div> -->
-                <!-- <div class="weather-icon"><img src="icons/unknown.png" /></div> -->
-                <!-- <p id="currentDay" class="lead"></p> -->
-              <!-- </div> -->
-             
-              
-             
-            <!-- </div> --> 
-          
-         <!-- </div> --> 
-            
-        
-        <!-- <div class="row">
-            <div class="col-2 cus-colStored">Stored searches
-            
-            </div> -->
-        
-              <!-- <section class = 'forecastContainer'>
-                
-              </section>
+                    <div class="card-body">
+                      <p class="card-textFive">
+                      
+                      </p>
+                    </div>
+                  </div>
+                </div> 
+  
+  
+               </section> 
+  
+  
+        </div>
 
-                <main class="container"> -->
-                    <!-- <section class="row"> -->
-                      <!-- <div class="col-12 col-md-9"> -->
-                        <!-- <h2>5 day Forecast</h2>
-                
-                        <section class="row ">
-                
-                          <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                            <div class="card" id="dayOneForecast">
-                             
-                              <div class="card-body">
-                                <p class="card-textOne">
-                                 
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                            <div class="card" id="dayOneForecast">
-                             
-                              <div class="card-body">
-                                <p class="card-textTwo">
-                                
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                            <div class="card" id="dayOneForecast">
-                              
-                              <div class="card-body">
-                                <p class="card-textThree">
-                                 
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                            <div class="card" id="dayOneForecast">
-                              
-                              <div class="card-body">
-                                <p class="card-textFour">
-                                 
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                            <div class="card" id="dayOneForecast">
-                              
-                              <div class="card-body">
-                                <p class="card-textFive">
-                                
-                                </p>
-                              </div>
-                            </div>
-                          </div> -->
+    </div>
+   
+        <div class = "forecastContainer">
+      
+    
 
 
-                        <!-- </section>   -->
-                      <!-- </div>
-                </main> -->
-            
         </div>
     </div>
+
+  </div>
+
+
 
     <script src="./script.js"></script>
 </body>

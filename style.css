@@ -9,13 +9,53 @@
 
 }
 .cus-col12{
-    background-color: blue;
+    /* background-color:#0d6efd; */
+    background-image: linear-gradient(to right, #0d6efd, rgba(2, 2, 34, 0.629));
     height: 10vh;
     color: white;
     font-weight: bold;
     margin-bottom: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
     
 }
+
+.rowNew{
+    margin-left: 100px;
+}
+
+.newContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.topNew{
+    display: flex;
+    flex-direction: row;
+}
+
+.topLeftNew{
+    width:fit-content;
+    margin-left: 160px;
+}
+
+.topRightNew{
+    width: 60vw;
+    height: 300px;
+    margin-left: 60px;
+    border:black solid 2px;
+    
+  
+}
+
+/* .forecastContainer{
+    background-color: magenta;
+    height: fit-content;
+   
+} */
 
 .cus-row{
     display: flex;
@@ -24,11 +64,22 @@
 
 }
 
+
+
+.cusRow{
+display:inline-flex;
+align-items: center;
+justify-content: center;
+flex:0,0,5;
+
+}
+
 .cus-colStored{
     /* background-color: violet; */
-    height:30vh;
+    height:fit-content;
     display:flex;
     flex-direction: column;
+  
 
 }
 
@@ -75,23 +126,27 @@
 
 
 .top{
+    
     width: 80vw;
-    height: 25vw;
+    /* height: 25vw; */
     display: flex;
     flex-direction: row;
     margin-left: 50px; 
 }
 
 .topLeft{
+  
     width: 30vw;
-    height: 50vh;
+    /* height: 50vh; */
     
     margin-left: 80px;
+    
 }
 
 .topRight{
     width: 70vw;
-    height: 300px; 
+    height: 200px;
+    /* height: 300px;  */
     /* border: black solid 2px; */
     display: flex;
     flex-direction: column;
@@ -116,7 +171,7 @@
 .bottomRight{
     width: 100vw;
     height: 50vh;
-    margin-left: 450px;
+    margin-left: 650px;
     margin-top: 5px;
     display: flex;
     align-items: center;
@@ -127,5 +182,32 @@
 .cityButton{
     height:30px;
     margin:2px;
+    border-radius: 8%;
+   
 
+
+}
+
+.searchButton{
+    background-color:#0d6efd;
+    color: white;
+    width:185px;
+    border-radius: 4px;
+}
+
+.dayOneCard{
+    height:80px;
+    width: 50px;
+    background-color: brown;
+}
+
+.cusCard{
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+    
 }
