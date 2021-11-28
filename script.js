@@ -36,7 +36,7 @@ function getApi(cityName) {
   var finalURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityName +
-    "&units=imperial&appid=51b8740ba38e6f14ed03de9b608c5b7a";
+    "&units=metric&appid=51b8740ba38e6f14ed03de9b608c5b7a";
 
   //clear the current result when new search is made
   if (cityName) {
@@ -69,7 +69,7 @@ function getApi(cityName) {
 
       cityName.textContent = data.name + " " + today;
       wind.textContent = "Wind " + data.wind.speed + " mph";
-      temp.textContent = "Temp  " + data.main.temp + "°F";
+      temp.textContent = "Temp  " + data.main.temp + "°C";
       humidity.textContent = "Humidity " + data.main.humidity + "%";
 
       var coordURL =
@@ -123,7 +123,7 @@ function getApi(cityName) {
   storedSearch.append(searchButton);
   //storedSearch.append(savedSearch + " ");
 
-  var requestForecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=51b8740ba38e6f14ed03de9b608c5b7a`;
+  var requestForecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=51b8740ba38e6f14ed03de9b608c5b7a`;
   fetch(requestForecastUrl)
     .then(function (response) {
       return response.json();
@@ -162,7 +162,7 @@ function getApi(cityName) {
         `http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}.png`
       );
       //weatherIcon.setAttribute('alt', iconDescription);
-      tempEl.textContent = `Temp: ${data.list[4].main.temp} °F`;
+      tempEl.textContent = `Temp: ${data.list[4].main.temp} °C`;
       windEl.textContent = `Wind: ${data.list[4].wind.speed} MPH`;
       humidityEl.textContent = `Humidity: ${data.list[4].main.humidity} %`;
 
@@ -206,7 +206,7 @@ function getApi(cityName) {
         `http://openweathermap.org/img/wn/${data.list[12].weather[0].icon}.png`
       );
       //weatherIcon.setAttribute('alt', iconDescription);
-      tempElTwo.textContent = `Temp: ${data.list[12].main.temp} °F`;
+      tempElTwo.textContent = `Temp: ${data.list[12].main.temp} °C`;
       windElTwo.textContent = `Wind: ${data.list[12].wind.speed} MPH`;
       humidityElTwo.textContent = `Humidity: ${data.list[12].main.humidity} %`;
 
@@ -249,7 +249,7 @@ function getApi(cityName) {
         `http://openweathermap.org/img/wn/${data.list[20].weather[0].icon}.png`
       );
       //weatherIcon.setAttribute('alt', iconDescription);
-      tempElThree.textContent = `Temp: ${data.list[20].main.temp} °F`;
+      tempElThree.textContent = `Temp: ${data.list[20].main.temp} °C`;
       windElThree.textContent = `Wind: ${data.list[20].wind.speed} MPH`;
       humidityElThree.textContent = `Humidity: ${data.list[20].main.humidity} %`;
 
@@ -292,7 +292,7 @@ function getApi(cityName) {
         `http://openweathermap.org/img/wn/${data.list[28].weather[0].icon}.png`
       );
       //weatherIcon.setAttribute('alt', iconDescription);
-      tempElFour.textContent = `Temp: ${data.list[28].main.temp} °F`;
+      tempElFour.textContent = `Temp: ${data.list[28].main.temp} °C`;
       windElFour.textContent = `Wind: ${data.list[28].wind.speed} MPH`;
       humidityElFour.textContent = `Humidity: ${data.list[28].main.humidity} %`;
 
@@ -335,7 +335,7 @@ function getApi(cityName) {
         `http://openweathermap.org/img/wn/${data.list[36].weather[0].icon}.png`
       );
       //weatherIcon.setAttribute('alt', iconDescription);
-      tempElFive.textContent = `Temp: ${data.list[36].main.temp} °F`;
+      tempElFive.textContent = `Temp: ${data.list[36].main.temp} °C`;
       windElFive.textContent = `Wind: ${data.list[36].wind.speed} MPH`;
       humidityElFive.textContent = `Humidity: ${data.list[36].main.humidity} %`;
 
@@ -343,7 +343,7 @@ function getApi(cityName) {
     });
 
   searchButton.addEventListener("click", reRun);
-  clearSearchBar.addEventListener("click", clearSearch);
+  //clearSearchBar.addEventListener("click", clearSearch);
 
   function clearSearch(){
     console.log(nameInputEl.value);
